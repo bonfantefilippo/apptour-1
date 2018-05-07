@@ -10,11 +10,15 @@ export class StorageService {
 
   constructor() { }
 
-  onLean() {
-
+  onLean(temp) {
+    this.leanClick.emit(temp);
   }
 
   onDigital() {
+
+  }
+
+  onMouseOver() {
 
   }
 
