@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StorageService} from '../storage.service';
 
 @Component({
   selector: 'app-tips',
@@ -6,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tips.component.css']
 })
 export class TipsComponent implements OnInit {
-
-  constructor() { }
-
+  tip = '';
+  constructor(public service: StorageService) {
+    this.service.objectMouseOver.subscribe(res => {
+      this.tip = 'current index:' + res.curIndex;
+    });
+  }
   ngOnInit() {
+  }
+  tipString() {
+    return 'Tip {' + this.tip + '}';
   }
 
 }
