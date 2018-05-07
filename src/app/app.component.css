@@ -1,0 +1,41 @@
+.app {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  height: 820px;
+  grid-template-areas:
+    'grafici grafici topmenu topmenu topmenu topmenu tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici bottommenu bottommenu bottommenu bottommenu tips tips';
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid black;
+}
+
+#grafici {
+  grid-area: grafici;
+  background-color: coral;
+}
+
+#topmenu {
+  grid-area: topmenu;
+  background-color: aquamarine;
+}
+
+#view {
+  grid-area: view;
+  height: 720px;
+  background-color: lightgrey;
+}
+
+#bottommenu {
+  grid-area: bottommenu;
+}
+
+#tips {
+  grid-area: tips;
+}
