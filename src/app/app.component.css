@@ -1,7 +1,8 @@
 .app {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  height: 820px;
+  grid-template-rows: 40px repeat(6, 120px) 40px;
+  height: 800px;
   grid-template-areas:
     'grafici grafici topmenu topmenu topmenu topmenu tips tips'
     'grafici grafici view view view view tips tips'
@@ -30,10 +31,12 @@
   grid-area: view;
   height: 720px;
   background-color: lightgrey;
+  padding: 9px;
 }
 
 #bottommenu {
   grid-area: bottommenu;
+  background-color: bisque;
 }
 
 #tips {
