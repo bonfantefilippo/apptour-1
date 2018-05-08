@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StorageService} from '../storage.service';
 
 @Component({
   selector: 'app-bottommenu',
@@ -7,7 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BottommenuComponent implements OnInit {
 
-  constructor() { }
+  leanStato = false;
+  digitalStato = false;
+  constructor(public service: StorageService) {
+    this.service.leanClick.subscribe(res => {
+      this.leanStato = res.stato;
+    });
+    this.service.digitalClick.subscribe(res => {
+      this.digitalStato = res.stato;
+    });
+  }
 
   ngOnInit() {
   }

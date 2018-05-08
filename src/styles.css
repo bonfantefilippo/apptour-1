@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: #fcfcfc;
+}
+
+h1 {
+  text-align: center;
+  color: #fcfcfc;
+  padding: 0;
+  margin: 11px;
+}
+
+.button {
+  border: none;
+  height: 45px;
+  width: 150px;
+  background-color: 	#ff605f;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.button p {
+  text-align: center;
+  color: #fcfcfc;
+  padding: 0;
+  margin-top: 13px;
+}
+
+.white {
+  color: #fcfcfc;
+}
+
+.textShadow {
+  text-shadow: 2px 2px red;
+}
+
+.backAntracite {
+  background-color: #293133;
+}
+
+.backScuro {
+  background-color: #1e2426;
+}
+
+.backWhite {
+  background-color: #fcfcfc;
+}
+
+.marginTop {
+  margin-top: 7px;
+}
+
+.backGreen {
+  background-color: #49b675;
+}

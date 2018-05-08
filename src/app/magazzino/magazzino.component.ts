@@ -9,17 +9,25 @@ import {ObjectID} from '../object-id.enum';
 })
 export class MagazzinoComponent implements OnInit {
   ObjectID = ObjectID;
+  classe = 'magazzino2';
+  backGround = 'tradizionale'
 constructor(public service: StorageService) {
-  /*this.service.viewChange.subscribe(res => {
-    this.index = res.curIndex;
-  });*/
+  this.service.ottimizzazione1.subscribe(res => {
+    console.dir(res.stato);
+    if (res.stato) {
+      this.classe = 'magazzino2';
+      this.backGround = 'tradizionale';
+    } else {
+      this.classe = 'magazzino1';
+      this.backGround = 'lean';
+    }
+  });
 }
 
 ngOnInit() {
 }
-onDivClick(index) {
-  this.service.onView({curIndex: index});
-}
+
+
 onDivMouseOver(index) {
   this.service.onMouseOver({curIndex: index});
 }
