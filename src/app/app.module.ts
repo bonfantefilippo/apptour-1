@@ -13,6 +13,9 @@ import { PreparazioneComponent } from './preparazione/preparazione.component';
 import { LavorazioneComponent } from './lavorazione/lavorazione.component';
 import { FinituraComponent } from './finitura/finitura.component';
 import { StorageService } from './storage.service';
+import { LeanComponent } from './lean/lean.component';
+import { DigitalComponent } from './digital/digital.component';
+import { IntroComponent } from './intro/intro.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { StorageService } from './storage.service';
     MagazzinoComponent,
     PreparazioneComponent,
     LavorazioneComponent,
-    FinituraComponent
+    FinituraComponent,
+    LeanComponent,
+    DigitalComponent,
+    IntroComponent
   ],
   imports: [
     BrowserModule

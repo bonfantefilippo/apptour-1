@@ -37,8 +37,17 @@
 #bottommenu {
   grid-area: bottommenu;
   background-color: bisque;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 #tips {
   grid-area: tips;
+}
+
+#intro {
+  position: absolute;
+  margin-top: -800px;
+  height: 800px;
+  width: 100%;
 }
