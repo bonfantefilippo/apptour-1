@@ -17,25 +17,28 @@
 
 #child1 {
   grid-area: child1;
-  background-color: rgba(252, 252, 252, 0.3);
 }
 
 #child2 {
   grid-area: child2;
-  background-color:	rgba(254, 216, 216, 0.3);
 }
 
 #child3 {
   grid-area: child3;
-  background-color: rgba(47, 79, 79, 0.1);
 }
 
 #child4 {
   grid-area: child4;
-  background-color:	rgba(0, 159, 160, 0.2);
 }
 
 #child5 {
   grid-area: child5;
-  background-color:	rgba(255, 96, 95, 0.2);
 }
+
+.sfondoTradizionale {
+  background-image: url("../../../documentation/PIANTINA.png");
+  background-size: cover;
+  position: center;
+}
+
+

@@ -1,13 +1,8 @@
-<p>
-  magazzino works!
-</p>
-<div (click)="onDivClick(ObjectID.magazzinoChild1)"
-     (mouseover)="onDivMouseOver(ObjectID.magazzinoChild1)"> div 1</div>
-<div (click)="onDivClick(ObjectID.magazzinoChild2)"
-     (mouseover)="onDivMouseOver(ObjectID.magazzinoChild2)"> div 2</div>
-<div (click)="onDivClick(ObjectID.magazzinoChild3)"
-     (mouseover)="onDivMouseOver(ObjectID.magazzinoChild3)"> div 3</div>
-<div (click)="onDivClick(ObjectID.magazzinoChild4)"
-     (mouseover)="onDivMouseOver(ObjectID.magazzinoChild4)"> div 4</div>
-<div (click)="onDivClick(ObjectID.magazzinoChild5)"
-     (mouseover)="onDivMouseOver(ObjectID.magazzinoChild5)"> div 5</div>
+<div class="magazzino">
+  <div routerLink="/magG1" routerLinkActive="active" id="magG1"
+       (mouseover)="onDivMouseOver(ObjectID.magazzinoChild1)"></div>
+  <div [ngClass]="classe">
+    <div id="magG2" (mouseover)="onDivMouseOver(ObjectID.magazzinoChild2)"></div>
+    <div id="magG3" (mouseover)="onDivMouseOver(ObjectID.magazzinoChild3)"></div>
+  </div>
+</div>

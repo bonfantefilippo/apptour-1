@@ -49,6 +49,8 @@ export class StorageService {
   @Output() digitalClick = new EventEmitter();
   @Output() objectMouseOver = new EventEmitter();
   @Output() viewChange = new EventEmitter();
+  @Output() ottimizzazione1 = new EventEmitter();
+  @Output() ottimizzazione2 = new EventEmitter();
 
   constructor() { }
 
@@ -61,6 +63,14 @@ export class StorageService {
 
   }
 
+  onOttimizza1(event) {
+    this.ottimizzazione1.emit(event);
+  }
+
+  onOttimizza2(event) {
+    this.ottimizzazione2.emit(event);
+  }
+
   onMouseOver(event) {
     this.objectMouseOver.emit(event);
   }
@@ -71,6 +81,7 @@ export class StorageService {
     console.log('query ' + curIndex + ' pointTo ' + this.index);
     this.viewChange.emit({curIndex: this.index});
   }
+
   curView() {
     return this.index;
   }

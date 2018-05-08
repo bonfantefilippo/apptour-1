@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { GraficiComponent } from './grafici/grafici.component';
@@ -16,6 +17,26 @@ import { StorageService } from './storage.service';
 import { LeanComponent } from './lean/lean.component';
 import { DigitalComponent } from './digital/digital.component';
 import { IntroComponent } from './intro/intro.component';
+import { MagazzinofinaleComponent } from './magazzinofinale/magazzinofinale.component';
+import { MagazzinogrezzounoComponent } from './magazzinogrezzouno/magazzinogrezzouno.component';
+
+
+const appRoutes: Routes = [
+  { path: 'piantina', component: PiantinaComponent },
+  { path: 'magazzino', component: MagazzinoComponent },
+  { path: 'preparazione', component: PreparazioneComponent },
+  { path: 'lavorazione', component: LavorazioneComponent },
+  { path: 'finitura', component: FinituraComponent },
+  { path: 'magazzinofinale', component: MagazzinofinaleComponent },
+  { path: 'magG1', component: MagazzinogrezzounoComponent },
+  { path: 'magG2', component: MagazzinofinaleComponent },
+  { path: 'magG3', component: MagazzinofinaleComponent },
+  { path: '',
+    redirectTo: 'piantina',
+    pathMatch: 'full'
+  },
+  { path: '**', component: AppComponent }
+];
 
 @NgModule({
   declarations: [
@@ -32,10 +53,16 @@ import { IntroComponent } from './intro/intro.component';
     FinituraComponent,
     LeanComponent,
     DigitalComponent,
-    IntroComponent
+    IntroComponent,
+    MagazzinofinaleComponent,
+    MagazzinogrezzounoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
   ],
   providers: [StorageService],
   bootstrap: [AppComponent]

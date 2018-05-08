@@ -16,8 +16,6 @@ export enum ObjectID {
   magazzinoChild1,
   magazzinoChild2,
   magazzinoChild3,
-  magazzinoChild4,
-  magazzinoChild5,
   viewPreparazione,
   preparazioneChild1,
   preparazioneChild2,

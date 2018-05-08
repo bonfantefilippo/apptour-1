@@ -1,0 +1,30 @@
+.magazzino {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 702px;
+}
+
+.magazzino1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.magazzino2 {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#magG1 {
+  border: 1px solid black;
+}
+
+#magG2 {
+  border: 1px solid black;
+}
+
+#magG3 {
+  border: 1px solid black;
+}
+
+
+
