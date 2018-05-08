@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../storage.service';
+import {ObjectID} from '../object-id.enum';
+import {stringify} from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-view',
@@ -7,19 +9,21 @@ import {StorageService} from '../storage.service';
   styleUrls: ['./view.component.css']
 })
 export class ViewComponent implements OnInit {
+  ObjectID = ObjectID;
+  index: ObjectID = ObjectID.viewPiantina;
 
-  index = 1;
-
-  constructor(public service: StorageService) { }
+  constructor(public service: StorageService) {
+    this.service.viewChange.subscribe(res => {
+      this.index = res.curIndex;
+    });
+  }
 
   ngOnInit() {
+    this.index = this.service.curView();
   }
 
   curIndex(temp): boolean {
-
-    if (temp === this.service.load())
-      return true;
-    return false;
+    return (temp == this.index);
   }
 
 }

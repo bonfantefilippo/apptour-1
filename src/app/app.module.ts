@@ -9,6 +9,10 @@ import { TopmenuComponent } from './topmenu/topmenu.component';
 import { ViewComponent } from './view/view.component';
 import { PiantinaComponent } from './piantina/piantina.component';
 import { MagazzinoComponent } from './magazzino/magazzino.component';
+import { PreparazioneComponent } from './preparazione/preparazione.component';
+import { LavorazioneComponent } from './lavorazione/lavorazione.component';
+import { FinituraComponent } from './finitura/finitura.component';
+import { StorageService } from './storage.service';
 
 @NgModule({
   declarations: [
@@ -19,12 +23,15 @@ import { MagazzinoComponent } from './magazzino/magazzino.component';
     TopmenuComponent,
     ViewComponent,
     PiantinaComponent,
-    MagazzinoComponent
+    MagazzinoComponent,
+    PreparazioneComponent,
+    LavorazioneComponent,
+    FinituraComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

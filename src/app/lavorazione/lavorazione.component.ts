@@ -3,11 +3,11 @@ import {StorageService} from '../storage.service';
 import {ObjectID} from '../object-id.enum';
 
 @Component({
-  selector: 'app-piantina',
-  templateUrl: './piantina.component.html',
-  styleUrls: ['./piantina.component.css']
+  selector: 'app-lavorazione',
+  templateUrl: './lavorazione.component.html',
+  styleUrls: ['./lavorazione.component.css']
 })
-export class PiantinaComponent implements OnInit {
+export class LavorazioneComponent implements OnInit {
   ObjectID = ObjectID;
   constructor(public service: StorageService) {
     /*this.service.viewChange.subscribe(res => {
@@ -24,3 +24,4 @@ export class PiantinaComponent implements OnInit {
     this.service.onMouseOver({curIndex: index});
   }
 }
+

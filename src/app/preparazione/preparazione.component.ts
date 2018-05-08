@@ -3,11 +3,11 @@ import {StorageService} from '../storage.service';
 import {ObjectID} from '../object-id.enum';
 
 @Component({
-  selector: 'app-piantina',
-  templateUrl: './piantina.component.html',
-  styleUrls: ['./piantina.component.css']
+  selector: 'app-preparazione',
+  templateUrl: './preparazione.component.html',
+  styleUrls: ['./preparazione.component.css']
 })
-export class PiantinaComponent implements OnInit {
+export class PreparazioneComponent implements OnInit {
   ObjectID = ObjectID;
   constructor(public service: StorageService) {
     /*this.service.viewChange.subscribe(res => {

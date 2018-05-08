@@ -1,3 +1,6 @@
-<app-piantina *ngIf="curIndex(0)"></app-piantina>
-<app-magazzino *ngIf="curIndex(1)"></app-magazzino>
+<app-piantina *ngIf="curIndex(ObjectID.viewPiantina)"></app-piantina>
+<app-magazzino *ngIf="curIndex(ObjectID.viewMagazzino)"></app-magazzino>
+<app-preparazione *ngIf="curIndex(ObjectID.viewPreparazione)"></app-preparazione>
+<app-lavorazione *ngIf="curIndex(ObjectID.viewLavorazione)"></app-lavorazione>
+<app-finitura *ngIf="curIndex(ObjectID.viewFinitura)"></app-finitura>
 
