@@ -1,10 +1,8 @@
-
-
 .app {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 60px repeat(6, 120px) 120px;
-  height: 900px;
+  grid-template-rows: 80px repeat(6, 120px) 135px;
+  height: 935px;
   grid-template-areas:
     'grafici grafici topmenu topmenu topmenu topmenu tips tips'
     'grafici grafici view view view view tips tips'
@@ -21,30 +19,29 @@
 
 #grafici {
   grid-area: grafici;
-  background-color: coral;
+  padding: 10px;
 }
 
 #topmenu {
   grid-area: topmenu;
-  background-color: aquamarine;
+  padding: 10px;
 }
 
 #view {
   grid-area: view;
   height: 720px;
-  background-color: lightgrey;
-  padding: 9px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 #bottommenu {
   grid-area: bottommenu;
-  background-color: bisque;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 10px;
 }
 
 #tips {
   grid-area: tips;
+  padding: 10px;
 }
 
 #intro {

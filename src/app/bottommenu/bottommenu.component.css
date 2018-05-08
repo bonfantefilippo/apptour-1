@@ -7,3 +7,12 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+p {
+  margin-left: 10px
+}

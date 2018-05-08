@@ -1,0 +1,16 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 20px;
+  grid-row-gap: 30px;
+  overflow: scroll;
+}
+
+.container div {
+  height: 230px;
+  width: 230px;
+  border-radius: 5px;
+  border: 1px solid #fcfcfc;
+  margin-left: auto;
+  margin-right: auto;
+}

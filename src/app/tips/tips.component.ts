@@ -16,7 +16,7 @@ export class TipsComponent implements OnInit {
   ngOnInit() {
   }
   tipString() {
-    return 'Tip {' + this.tip + '}';
+    return 'Tip: ' + this.tip + '';
   }
 
 }

@@ -10,13 +10,16 @@ import {ObjectID} from '../object-id.enum';
 export class MagazzinoComponent implements OnInit {
   ObjectID = ObjectID;
   classe = 'magazzino2';
+  backGround = 'tradizionale'
 constructor(public service: StorageService) {
   this.service.ottimizzazione1.subscribe(res => {
     console.dir(res.stato);
     if (res.stato) {
-      this.classe = 'magazzino1';
-    } else {
       this.classe = 'magazzino2';
+      this.backGround = 'tradizionale';
+    } else {
+      this.classe = 'magazzino1';
+      this.backGround = 'lean';
     }
   });
 }

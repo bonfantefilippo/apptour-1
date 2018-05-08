@@ -15,16 +15,23 @@
 }
 
 #magG1 {
-  border: 1px solid black;
 }
 
 #magG2 {
-  border: 1px solid black;
 }
 
 #magG3 {
-  border: 1px solid black;
 }
 
+.tradizionale {
+  background-image: url("../../../documentation/MAGAZZINOT.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
 
+.lean {
+  background-image: url("../../../documentation/MAGAZZINOL.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
 

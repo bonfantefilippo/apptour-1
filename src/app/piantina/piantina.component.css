@@ -37,7 +37,7 @@
 
 .sfondoTradizionale {
   background-image: url("../../../documentation/PIANTINA.png");
-  background-size: cover;
+  background-size: 100% 100%;
   position: center;
 }
 
