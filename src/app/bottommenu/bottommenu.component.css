@@ -1,0 +1,9 @@
+#lean {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#digital {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
