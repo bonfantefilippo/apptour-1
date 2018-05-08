@@ -5,3 +5,20 @@ div {
 div:hover {
   cursor: pointer;
 }
+
+.home {
+  position: absolute;
+  background-color: ghostwhite;
+  border: 1px solid #293133;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  background-image: url("../../../documentation/home-512.png");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+}
+
+.home:hover {
+  opacity: 1;
+}
