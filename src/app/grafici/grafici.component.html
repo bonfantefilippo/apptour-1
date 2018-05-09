@@ -2,7 +2,11 @@
 <p>digital: {{digitalStato}}</p>-->
 <h1 class="white">DASHBOARD</h1>
 <div class="container">
-  <div routerLink="/grafico1" routerLinkActive="active" class="graphic backWhite" [ngClass]=""></div>
-  <div class="graphic backWhite" [ngClass]=""></div>
-  <div class="graphic backWhite" [ngClass]=""></div>
+  <div routerLink="/grafico1" routerLinkActive="active" class="graphic backWhite"
+       (click)="changeClass()" [ngClass]="grafico1"
+       (mouseover)="onDivMouseOver(ObjectID.chart2)"></div>
+  <div class="graphic backWhite scarti" [ngClass]=""
+       (mouseover)="onDivMouseOver(ObjectID.chart3)">></div>
+  <div class="graphic backWhite" [ngClass]=""
+       (mouseover)="onDivMouseOver(ObjectID.chart4)">></div>
 </div>

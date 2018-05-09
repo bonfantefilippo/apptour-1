@@ -1,6 +1,11 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
 import {ObjectID} from './object-id.enum';
+
 const objMapping: ObjectID[] = [
+  ObjectID.viewPiantina,
+  ObjectID.viewPiantina,
+  ObjectID.viewPiantina,
+  ObjectID.viewPiantina,
   ObjectID.viewPiantina,
   ObjectID.viewPiantina,
   ObjectID.viewPiantina,
@@ -13,6 +18,10 @@ const objMapping: ObjectID[] = [
   ObjectID.viewPreparazione,
   ObjectID.viewLavorazione,
   ObjectID.viewFinitura,
+  ObjectID.viewMagazzinoF,
+  ObjectID.viewPiantina,
+  ObjectID.viewPiantina,
+  ObjectID.viewPiantina,
   ObjectID.viewPiantina,
   ObjectID.viewPiantina,
   ObjectID.viewPiantina,
@@ -44,6 +53,8 @@ const objMapping: ObjectID[] = [
 export class StorageService {
   /* index è l'indice dell'oggetto corrente caricato nella View*/
   index: ObjectID = ObjectID.viewPiantina;
+  statoOttimizza1=false;
+  statoOttimizza2=false;
 
   @Output() leanClick = new EventEmitter();
   @Output() digitalClick = new EventEmitter();
@@ -51,8 +62,14 @@ export class StorageService {
   @Output() viewChange = new EventEmitter();
   @Output() ottimizzazione1 = new EventEmitter();
   @Output() ottimizzazione2 = new EventEmitter();
+  @Output() grafici = new EventEmitter();
+  @Output() graficiInView = new EventEmitter();
 
-  constructor() { }
+  classGraph1 = 'grafico';
+  classGraph2 = 'grafico2';
+
+  constructor() {
+  }
 
   onLean(event) {
     this.leanClick.emit(event);
@@ -64,13 +81,18 @@ export class StorageService {
   }
 
   onOttimizza1(event) {
+    this.statoOttimizza1=event.stato;
     this.ottimizzazione1.emit(event);
   }
 
   onOttimizza2(event) {
+    this.statoOttimizza2=event.stato;
     this.ottimizzazione2.emit(event);
   }
 
+  curOttimizza() {
+    return {ottimizza1: this.statoOttimizza1, ottimizza2: this.statoOttimizza2}
+  }
   onMouseOver(event) {
     this.objectMouseOver.emit(event);
   }
@@ -80,6 +102,17 @@ export class StorageService {
     this.index = objMapping[curIndex];
     console.log('query ' + curIndex + ' pointTo ' + this.index);
     this.viewChange.emit({curIndex: this.index});
+  }
+
+  changeClass({grafico1: value1, grafico2: value2}) {
+    this.classGraph1 = value1;
+    this.classGraph2 = value2;
+    this.grafici.emit({first: this.classGraph1, second: this.classGraph2});
+  }
+
+  changeClassGraphFirst() {
+    let obj = {first: this.classGraph1};
+    return obj;
   }
 
   curView() {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StorageService} from '../storage.service';
 import {ObjectID} from '../object-id.enum';
 
@@ -21,18 +21,37 @@ export class TopmenuComponent implements OnInit {
 
   onLean() {
     this.btnLeanState = !this.btnLeanState;
+    this.setClass();
     this.service.onLean({stato: this.btnLeanState});
   }
 
   onDigital() {
     this.btnDigitalState = !this.btnDigitalState;
+    this.setClass();
     this.service.onDigital({stato: this.btnDigitalState});
   }
+
   onLeanOver() {
     this.service.onMouseOver({curIndex: ObjectID.btnlean});
   }
+
   onDigitalOver() {
     this.service.onMouseOver({curIndex: ObjectID.btnDigital});
+  }
+
+  setClass() {
+    if (!this.btnLeanState && !this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico', grafico2: 'grafico4'});
+    }
+    else if (this.btnLeanState && !this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico1', grafico2: 'grafico5'});
+    }
+    else if (!this.btnLeanState && this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico2', grafico2: 'grafico6'});
+    }
+    else if (this.btnLeanState && this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico3', grafico2: 'grafico7'});
+    }
   }
 
 }

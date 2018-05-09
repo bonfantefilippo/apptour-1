@@ -20,6 +20,8 @@ import { IntroComponent } from './intro/intro.component';
 import { MagazzinofinaleComponent } from './magazzinofinale/magazzinofinale.component';
 import { MagazzinogrezzounoComponent } from './magazzinogrezzouno/magazzinogrezzouno.component';
 import { GraficounoComponent } from './graficouno/graficouno.component';
+import { MagazzinogrezzodueComponent } from './magazzinogrezzodue/magazzinogrezzodue.component';
+import { MagazzinogrezzotreComponent } from './magazzinogrezzotre/magazzinogrezzotre.component';
 
 
 const appRoutes: Routes = [
@@ -30,8 +32,8 @@ const appRoutes: Routes = [
   { path: 'finitura', component: FinituraComponent },
   { path: 'magazzinofinale', component: MagazzinofinaleComponent },
   { path: 'magG1', component: MagazzinogrezzounoComponent },
-  { path: 'magG2', component: MagazzinofinaleComponent },
-  { path: 'magG3', component: MagazzinofinaleComponent },
+  { path: 'magG2', component: MagazzinogrezzodueComponent },
+  { path: 'magG3', component: MagazzinogrezzotreComponent },
   { path: 'grafico1', component: GraficounoComponent },
   { path: '',
     redirectTo: 'piantina',
@@ -58,7 +60,9 @@ const appRoutes: Routes = [
     IntroComponent,
     MagazzinofinaleComponent,
     MagazzinogrezzounoComponent,
-    GraficounoComponent
+    GraficounoComponent,
+    MagazzinogrezzodueComponent,
+    MagazzinogrezzotreComponent
   ],
   imports: [
     BrowserModule,

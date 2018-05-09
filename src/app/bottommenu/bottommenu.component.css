@@ -1,15 +1,22 @@
 #lean {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #49b675;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 #digital {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  border: 1px solid #ff605f;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 312px 312px;
   padding-left: 10px;
+  grid-column-gap: 10px;
 }

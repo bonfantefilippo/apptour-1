@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {StorageService} from '../storage.service';
+import {ObjectID} from '../object-id.enum';
+import {TipList} from '../tip-list';
 
 @Component({
   selector: 'app-tips',
@@ -8,9 +10,12 @@ import {StorageService} from '../storage.service';
 })
 export class TipsComponent implements OnInit {
   tip = '';
+  index: ObjectID = ObjectID.viewPiantina;
+  tipList: TipList = new TipList();
   constructor(public service: StorageService) {
     this.service.objectMouseOver.subscribe(res => {
-      this.tip = 'current index:' + res.curIndex;
+      this.index = res.curIndex;
+      this.tip = 'current index:' + this.tipList.getTip(res.curIndex);
     });
   }
   ngOnInit() {

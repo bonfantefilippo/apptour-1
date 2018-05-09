@@ -1,2 +1,6 @@
-<div class="button" (click)="onOttimizza1()"><p>Ottimizzazione1</p></div>
-<div class="button" (click)="onOttimizza2()"><p>Ottimizzazione2</p></div>
+<div [ngClass]="{'deactive': !btnOttimizza1, 'backGreen': btnOttimizza1}" class="button"
+     (click)="onOttimizza1()"
+     (mouseover)="onDivMouseOver(ObjectID.btnLeanChild1)"><p>LAYOUT</p></div>
+<div class="button deactive"
+     (click)="onOttimizza2()"
+     (mouseover)="onDivMouseOver(ObjectID.btnLeanChild2)"><p>...</p></div>
