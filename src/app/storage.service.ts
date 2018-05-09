@@ -45,6 +45,8 @@ const objMapping: ObjectID[] = [
 export class StorageService {
   /* index è l'indice dell'oggetto corrente caricato nella View*/
   index: ObjectID = ObjectID.viewPiantina;
+  statoOttimizza1=false;
+  statoOttimizza2=false;
 
   @Output() leanClick = new EventEmitter();
   @Output() digitalClick = new EventEmitter();
@@ -71,13 +73,17 @@ export class StorageService {
   }
 
   onOttimizza1(event) {
+    this.statoOttimizza1=event.stato;
     this.ottimizzazione1.emit(event);
   }
 
   onOttimizza2(event) {
+    this.statoOttimizza2=event.stato;
     this.ottimizzazione2.emit(event);
   }
-
+  curOttimizza() {
+    return {ottimizza1: this.statoOttimizza1, ottimizza2: this.statoOttimizza2}
+  }
   onMouseOver(event) {
     this.objectMouseOver.emit(event);
   }
