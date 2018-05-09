@@ -35,3 +35,15 @@
   background-position: center;
 }
 
+.digital {
+  background-image: url("../../../documentation/MAGAZZINOT_digital.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.all {
+  background-image: url("../../../documentation/MAGAZZINOL_DIGITAL.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+

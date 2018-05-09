@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {StorageService} from '../storage.service';
+import {ObjectID} from '../object-id.enum';
 
 @Component({
   selector: 'app-grafici',
@@ -7,6 +8,8 @@ import {StorageService} from '../storage.service';
   styleUrls: ['./grafici.component.css']
 })
 export class GraficiComponent implements OnInit {
+
+  ObjectID = ObjectID;
   leanStato = false;
   digitalStato = false;
   grafico1 = 'grafico'
@@ -24,8 +27,8 @@ export class GraficiComponent implements OnInit {
     this.service.grafici.subscribe(res => {
       this.grafico1 = res.first;
       this.grafico2 = res.second;
-      return this.grafico1, this.grafico2;
-    })
+     /* return this.grafico1, this.grafico2;*/
+    });
   }
 
   ngOnInit() {
@@ -34,6 +37,9 @@ export class GraficiComponent implements OnInit {
 
   changeClass() {
     this.service.changeClassGraphFirst();
+  }
+  onDivMouseOver(index) {
+    this.service.onMouseOver({curIndex: index});
   }
 
 }
