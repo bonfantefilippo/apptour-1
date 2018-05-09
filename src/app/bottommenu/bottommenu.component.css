@@ -11,8 +11,5 @@
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-p {
-  margin-left: 10px
+  padding-left: 10px;
 }

@@ -19,6 +19,7 @@ import { DigitalComponent } from './digital/digital.component';
 import { IntroComponent } from './intro/intro.component';
 import { MagazzinofinaleComponent } from './magazzinofinale/magazzinofinale.component';
 import { MagazzinogrezzounoComponent } from './magazzinogrezzouno/magazzinogrezzouno.component';
+import { GraficounoComponent } from './graficouno/graficouno.component';
 
 
 const appRoutes: Routes = [
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
   { path: 'magG1', component: MagazzinogrezzounoComponent },
   { path: 'magG2', component: MagazzinofinaleComponent },
   { path: 'magG3', component: MagazzinofinaleComponent },
+  { path: 'grafico1', component: GraficounoComponent },
   { path: '',
     redirectTo: 'piantina',
     pathMatch: 'full'
@@ -55,7 +57,8 @@ const appRoutes: Routes = [
     DigitalComponent,
     IntroComponent,
     MagazzinofinaleComponent,
-    MagazzinogrezzounoComponent
+    MagazzinogrezzounoComponent,
+    GraficounoComponent
   ],
   imports: [
     BrowserModule,

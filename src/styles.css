@@ -3,6 +3,7 @@
 p {
   font-family: 'Roboto', sans-serif;
   color: #fcfcfc;
+  padding-left: 10px;
 }
 
 h1 {
@@ -16,7 +17,7 @@ h1 {
   border: none;
   height: 45px;
   width: 150px;
-  background-color: 	#ff605f;
+  background-color: #ff605f;
   cursor: pointer;
   border-radius: 5px;
 }
@@ -45,7 +46,7 @@ h1 {
 }
 
 .backWhite {
-  background-color: #fcfcfc;
+  background-color:	#fffcf6;
 }
 
 .marginTop {
@@ -54,4 +55,18 @@ h1 {
 
 .backGreen {
   background-color: #49b675;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  background-color: #ff605f;
+  position: absolute;
+  margin-left: calc(870px);
+  margin-top: -50px;
+  border-radius: 50%;
+}
+
+.close p {
+  margin-top: 6px;
 }
