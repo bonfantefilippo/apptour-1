@@ -6,7 +6,7 @@ p {
   padding-left: 10px;
 }
 
-h1 {
+h1, h3 {
   text-align: center;
   font-family: 'Roboto', sans-serif;
   color: #fcfcfc;
@@ -14,12 +14,19 @@ h1 {
   margin: 11px;
 }
 
+a {
+  text-decoration: none;
+  color: lightskyblue;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10px;
+}
+
 .button {
-  border: none;
   height: 45px;
   width: 150px;
   cursor: pointer;
   border-radius: 5px;
+  border: 1px solid black
 }
 
 .deactive {
@@ -52,7 +59,7 @@ h1 {
 }
 
 .backWhite {
-  background-color:	#fffcf6;
+  background-color:	#f3f3f3;
 }
 
 .marginTop {
@@ -72,7 +79,7 @@ h1 {
   height: 30px;
   background-color: #ff605f;
   position: absolute;
-  margin-left: calc(870px);
+  margin-left: calc(585px);
   margin-top: -50px;
   border-radius: 50%;
 }
@@ -82,47 +89,58 @@ h1 {
 }
 
 .grafico {
+  margin-top: 20px;
   background-image: url("../documentation/grafico-min.png");
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .grafico1 {
+  margin-top: 20px;
   background-image: url("../documentation/grafico1-min.png");
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .grafico2 {
+  margin-top: 20px;
   background-image: url("../documentation/grafico2-min.png");
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .grafico3 {
+  margin-top: 20px;
   background-image: url("../documentation/grafico3-min.png");
-  background-size: cover;
+  background-size: auto 100%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 .graficoAll {
+  margin-top: 20px;
   background-image: url("../documentation/graficoAll.png");
-  background-size: cover;
-  background-position: center;
+  background-size: auto 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .scarti {
-  background-image: url("../documentation/scarti.png");
+  margin-top: 20px;
+  background-image: url("../documentation/scarti3.png");
   background-size: cover;
   background-position: center;
 }
 
 .containerWork {
   width: 100%;
-  height: 720px;
+  height: 532px;
   display: grid;
   grid-template-columns: 1fr 400px 1fr;
-  grid-template-rows: 340px 40px 340px;
+  grid-template-rows: 246px 40px 246px;
 }
 
 .centrata {

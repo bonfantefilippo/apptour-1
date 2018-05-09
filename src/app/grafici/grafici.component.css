@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   padding: 20px;
   grid-row-gap: 30px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .container .graphic {

@@ -1,20 +1,55 @@
-.app {
+.centraApp {
+  position: fixed;
+  width: 100%;
   display: grid;
+  grid-template-columns: 1fr 1340px 1fr;
+  z-index: 2;
+  margin-top: 20px;
+  grid-row-gap: 20px;
+}
+
+.centraApp .app {
+  margin-left: 1fr;
+  margin-right: 1fr;
+  width: 1340px;
+  grid-column: 2;
+  grid-row: 2;
+  display: grid;
+  box-shadow: 2px 1px 12px black;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 80px repeat(6, 90px) 135px;
+  grid-template-rows: 58px repeat(7, 76px) 30px 135px;
   height: 755px;
   grid-template-areas:
+    'grafici grafici text text text text tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
+    'grafici grafici view view view view tips tips'
     'grafici grafici topmenu topmenu topmenu topmenu tips tips'
-    'grafici grafici view view view view tips tips'
-    'grafici grafici view view view view tips tips'
-    'grafici grafici view view view view tips tips'
-    'grafici grafici view view view view tips tips'
-    'grafici grafici view view view view tips tips'
-    'grafici grafici view view view view tips tips'
     'grafici grafici bottommenu bottommenu bottommenu bottommenu tips tips';
   border-radius: 5px;
+  background-color: #293133;
   overflow: hidden;
   border: 1px solid black;
+}
+
+.centraApp h1 {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: 40px;
+}
+
+.background {
+  margin-left: -8px;
+  margin-top: -8px;
+  z-index: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #49b675;
 }
 
 #grafici {
@@ -25,6 +60,12 @@
 #topmenu {
   grid-area: topmenu;
   padding: 10px;
+}
+
+#text {
+  grid-area: text;
+  padding: 10px;
+  background-color: #293133;
 }
 
 #view {

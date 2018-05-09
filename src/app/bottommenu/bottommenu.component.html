@@ -1,7 +1,5 @@
-<h1 style="text-align: left">STRUMENTI</h1>
-
-<div class="container" *ngIf="leanStato || digitalStato">
+<div style="margin-top: 35px;" class="container" *ngIf="leanStato || digitalStato">
   <app-lean *ngIf="leanStato" id="lean"></app-lean>
   <app-digital *ngIf="digitalStato" id="digital"></app-digital>
 </div>
-<p *ngIf="!leanStato && !digitalStato">FOR CUSTOM A TRADITIONAL LINE SELECT AN OPTION FROM MENU'!</p>
+<p *ngIf="!leanStato && !digitalStato">Per aggiungere funzionalità scegli un'opzione tra LEAN e DIGITAL</p>

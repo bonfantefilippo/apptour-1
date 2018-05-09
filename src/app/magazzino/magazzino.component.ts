@@ -35,8 +35,8 @@ export class MagazzinoComponent implements OnInit {
   }
 
   getIndex() {
-    const iLean = this.ottimizza1 ? 0 : 1; // lean
-    const iDigital = this.ottimizza2 ? 0 : 1; // digital
+    const iLean = this.ottimizza1 ? 1 : 0; // lean
+    const iDigital = this.ottimizza2 ? 1 : 0; // digital
     return iLean + iDigital * 2;
   }
   setClass() {

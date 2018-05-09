@@ -15,13 +15,13 @@ export class TipsComponent implements OnInit {
   constructor(public service: StorageService) {
     this.service.objectMouseOver.subscribe(res => {
       this.index = res.curIndex;
-      this.tip = 'current index:' + this.tipList.getTip(res.curIndex);
+      this.tip =  this.tipList.getTip(res.curIndex);
     });
   }
   ngOnInit() {
   }
   tipString() {
-    return 'Tip: ' + this.tip + '';
+    return this.tip;
   }
 
 }
