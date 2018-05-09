@@ -1,8 +1,8 @@
 .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(9, 78px);
-  height: 702px;
+  grid-template-rows: repeat(9, 58px);
+  height: 522px;
   grid-template-areas:
     'child1 child1 child3 child3 child4 child4'
     'child1 child1 child3 child3 child4 child4'

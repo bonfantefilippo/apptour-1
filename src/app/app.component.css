@@ -1,8 +1,8 @@
 .app {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 80px repeat(6, 120px) 135px;
-  height: 935px;
+  grid-template-rows: 80px repeat(6, 90px) 135px;
+  height: 755px;
   grid-template-areas:
     'grafici grafici topmenu topmenu topmenu topmenu tips tips'
     'grafici grafici view view view view tips tips'
