@@ -57,6 +57,10 @@ h1 {
   background-color: #49b675;
 }
 
+.backRed {
+  background-color: #ff605f;
+}
+
 .close {
   width: 30px;
   height: 30px;
@@ -70,3 +74,29 @@ h1 {
 .close p {
   margin-top: 6px;
 }
+
+.grafico {
+  background-image: url("../documentation/grafico.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.grafico1 {
+  background-image: url("../documentation/grafico1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.grafico2 {
+  background-image: url("../documentation/grafico2.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.grafico3 {
+  background-image: url("../documentation/grafico3.png");
+  background-size: cover;
+  background-position: center;
+}
+
+

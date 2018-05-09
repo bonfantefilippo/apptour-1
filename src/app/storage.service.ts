@@ -1,5 +1,6 @@
 import {EventEmitter, Injectable, Output} from '@angular/core';
 import {ObjectID} from './object-id.enum';
+
 const objMapping: ObjectID[] = [
   ObjectID.viewPiantina,
   ObjectID.viewPiantina,
@@ -51,8 +52,14 @@ export class StorageService {
   @Output() viewChange = new EventEmitter();
   @Output() ottimizzazione1 = new EventEmitter();
   @Output() ottimizzazione2 = new EventEmitter();
+  @Output() grafici = new EventEmitter();
+  @Output() graficiInView = new EventEmitter();
 
-  constructor() { }
+  classGraph1 = 'grafico';
+  classGraph2 = 'grafico2';
+
+  constructor() {
+  }
 
   onLean(event) {
     this.leanClick.emit(event);
@@ -80,6 +87,17 @@ export class StorageService {
     this.index = objMapping[curIndex];
     console.log('query ' + curIndex + ' pointTo ' + this.index);
     this.viewChange.emit({curIndex: this.index});
+  }
+
+  changeClass({grafico1: value1, grafico2: value2}) {
+    this.classGraph1 = value1;
+    this.classGraph2 = value2;
+    this.grafici.emit({first: this.classGraph1, second: this.classGraph2});
+  }
+
+  changeClassGraphFirst() {
+    let obj = {first: this.classGraph1};
+    return obj;
   }
 
   curView() {
