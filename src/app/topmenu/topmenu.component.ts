@@ -39,16 +39,19 @@ export class TopmenuComponent implements OnInit {
     this.service.onMouseOver({curIndex: ObjectID.btnDigital});
   }
 
-  getIndex() {
-    const iLean = this.btnLeanState ? 0 : 1;
-    const iDigital = this.btnLeanState ? 0 : 1;
-    return iLean + iDigital * 2;
-  }
   setClass() {
-    const i = this.getIndex();
-    const aGrafici1 = ['grafico', 'grafico1', 'grafico2', 'grafico3'];
-    const aGrafici2 = ['grafico4', 'grafico5', 'grafico6', 'graficot'];
-    this.service.changeClass({grafico1:aGrafici1[i], grafico2:aGrafici2[i]});
+    if (!this.btnLeanState && !this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico', grafico2: 'grafico4'});
+    }
+    else if (this.btnLeanState && !this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico1', grafico2: 'grafico5'});
+    }
+    else if (!this.btnLeanState && this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico2', grafico2: 'grafico6'});
+    }
+    else if (this.btnLeanState && this.btnDigitalState) {
+      this.service.changeClass({grafico1: 'grafico3', grafico2: 'grafico7'});
+    }
   }
 
 }

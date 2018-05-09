@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {StorageService} from '../storage.service';
 
 @Component({
   selector: 'app-digital',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DigitalComponent implements OnInit {
 
-  constructor() { }
+  btnOttimizza1 = false;
+  btnOttimizza2 = false;
+
+  constructor(public service: StorageService) {
+
+  }
 
   ngOnInit() {
+  }
+
+  onOttimizza1() {
+    this.btnOttimizza1 = !this.btnOttimizza1;
+  }
+
+  onOttimizza2() {
+    this.btnOttimizza2 = !this.btnOttimizza2;
   }
 
 }

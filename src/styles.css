@@ -17,9 +17,14 @@ h1 {
   border: none;
   height: 45px;
   width: 150px;
-  background-color: #ff605f;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.deactive {
+  box-shadow: inset 0 0 6px black;
+  background-color: darkgrey;
+  opacity: 0.8;
 }
 
 .button p {
@@ -76,25 +81,31 @@ h1 {
 }
 
 .grafico {
-  background-image: url("../documentation/grafico.png");
+  background-image: url("../documentation/grafico-min.png");
   background-size: cover;
   background-position: center;
 }
 
 .grafico1 {
-  background-image: url("../documentation/grafico1.png");
+  background-image: url("../documentation/grafico1-min.png");
   background-size: cover;
   background-position: center;
 }
 
 .grafico2 {
-  background-image: url("../documentation/grafico2.png");
+  background-image: url("../documentation/grafico2-min.png");
   background-size: cover;
   background-position: center;
 }
 
 .grafico3 {
-  background-image: url("../documentation/grafico3.png");
+  background-image: url("../documentation/grafico3-min.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.graficoAll {
+  background-image: url("../documentation/graficoAll.png");
   background-size: cover;
   background-position: center;
 }
