@@ -1,7 +1,7 @@
 .magazzino {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 552px;
+  grid-template-rows: 522px;
 }
 
 .magazzino1 {
@@ -31,6 +31,18 @@
 
 .lean {
   background-image: url("../../../documentation/MAGAZZINOL.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.digital {
+  background-image: url("../../../documentation/MAGAZZINOT_digital.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.all {
+  background-image: url("../../../documentation/MAGAZZINOL_DIGITAL.png");
   background-size: 100% 100%;
   background-position: center;
 }

@@ -1,8 +1,8 @@
 .app {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: 80px repeat(6, 89px) 135px;
-  height: 749px;
+  grid-template-rows: 80px repeat(6, 90px) 135px;
+  height: 755px;
   grid-template-areas:
     'grafici grafici topmenu topmenu topmenu topmenu tips tips'
     'grafici grafici view view view view tips tips'
@@ -29,7 +29,7 @@
 
 #view {
   grid-area: view;
-  height: 572px;
+  height: 720px;
   padding-right: 20px;
   padding-left: 20px;
 }
