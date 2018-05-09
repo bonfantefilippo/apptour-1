@@ -81,6 +81,7 @@ export class StorageService {
     this.statoOttimizza2=event.stato;
     this.ottimizzazione2.emit(event);
   }
+
   curOttimizza() {
     return {ottimizza1: this.statoOttimizza1, ottimizza2: this.statoOttimizza2}
   }

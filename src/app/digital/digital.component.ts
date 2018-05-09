@@ -20,10 +20,7 @@ export class DigitalComponent implements OnInit {
 
   onOttimizza1() {
     this.btnOttimizza1 = !this.btnOttimizza1;
-  }
-
-  onOttimizza2() {
-    this.btnOttimizza2 = !this.btnOttimizza2;
+    this.service.onOttimizza2({stato: this.btnOttimizza1});
   }
 
 }

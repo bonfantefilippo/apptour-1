@@ -16,6 +16,9 @@ export class MagazzinoComponent implements OnInit {
     this.service.ottimizzazione1.subscribe(res => {
       this.setOttimizza(res.stato);
     });
+    this.service.ottimizzazione2.subscribe(res => {
+      this.setOttimizza(res.stato);
+    });
   }
 
   ngOnInit() {
@@ -25,10 +28,10 @@ export class MagazzinoComponent implements OnInit {
 
   setOttimizza(stato) {
     if (!stato) {
-      this.classe = 'magazzino1';
+      this.classe = 'magazzino2';
       this.backGround = 'tradizionale';
     } else {
-      this.classe = 'magazzino2';
+      this.classe = 'magazzino1';
       this.backGround = 'lean';
     }
   }

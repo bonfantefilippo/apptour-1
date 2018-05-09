@@ -25,8 +25,4 @@ export class LeanComponent implements OnInit {
     this.service.onOttimizza1({stato: this.btnOttimizza1});
   }
 
-  onOttimizza2() {
-    this.btnOttimizza2 = !this.btnOttimizza2;
-    this.service.onOttimizza2({stato: this.btnOttimizza2});
-  }
 }
